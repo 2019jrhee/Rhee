@@ -1,0 +1,21 @@
+<section class='container'>
+	<h1>Current Weather</h1>
+	<p>Check out the weather of your location!</p>
+</section>
+
+<center>
+	<! Sets up form >
+<%= form_tag show_path, method: "get", html: {class: "form"} do %>
+
+	<div class= "form-group col-sm-3 col-md-offset-5">
+		<%= text_field_tag(:place,"", placeholder: "Enter Zipcode",
+				class: "form-control") %>
+	</div>
+
+	<center>
+		<div class="form-group text-center">
+			<%=submit_tag "Search", class: "openweather-btn openweather-btn
+				btn-outline-info text-align: center;" %>
+				<% end %>
+		</div>
+	</center>
